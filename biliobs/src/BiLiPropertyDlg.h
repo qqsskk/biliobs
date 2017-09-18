@@ -147,7 +147,6 @@ protected:
 	obs_sceneitem_t* mSceneItem;
 	obs_source_t* mSrc;
 
-	//开始-各种备份数据
 	OBSData mBackupSettings;
 	vec2 mBackupItemPos;
 	vec2 mBackupItemScale;
@@ -156,7 +155,6 @@ protected:
 	vec2 mBackupBounds;
 
 	std::unique_ptr<BiliFiltersBackup> mBackupFilters;
-	//结束-各种备份数据
 
 	std::unique_ptr<BiliPropChangeEventFilter> mChangeEvnetFilter;
 
@@ -236,8 +234,8 @@ private:
 
 class BiLiPropertyDialogFactory
 {
-protected:
-	virtual ~BiLiPropertyDialogFactory() {} //所有的factory对象都是static的，所以不要释放
+public:
+	virtual ~BiLiPropertyDialogFactory() {}
 public:
 	BiLiPropertyDialogFactory() : mNextFactory(0) {}
 	virtual BiLiPropertyDlg* Create(QString &name, obs_sceneitem_t* pSceneItem, bool isNewSource, QWidget *parent = 0) = 0;
@@ -247,7 +245,7 @@ public:
 };
 
 extern BiLiPropertyDialogFactory* g_BiLiPropertyDialogFactoryList;
-extern BiLiPropertyDialogFactory* g_curBiLiPropertyDialogFactoryList; //别访问这两个，构建过程中用的
+extern BiLiPropertyDialogFactory* g_curBiLiPropertyDialogFactoryList;
 
 BiLiPropertyDialogFactory* GetBiLiPropertyDialogFactory(const char* sourceId);
 

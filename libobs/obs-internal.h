@@ -84,7 +84,6 @@ static inline bool obs_service_valid(const obs_service_t *obj, const char *f)
 
 /* ------------------------------------------------------------------------- */
 /* modules */
-
 struct obs_module {
 	char *mod_name;
 	const char *file;

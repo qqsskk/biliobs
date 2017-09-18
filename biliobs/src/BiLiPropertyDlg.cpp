@@ -1,4 +1,4 @@
-#include "BiLiPropertyDlg.h"
+﻿#include "BiLiPropertyDlg.h"
 #include <QMouseEvent>
 #include <QFileDialog>
 #include <QMessageBox>
@@ -107,11 +107,10 @@ BiLiPropertyDlg::BiLiPropertyDlg(QString &name, obs_sceneitem_t* pSceneItem, boo
 	mIsNewSource(isNewSource)
 {
 	setWindowFlags(Qt::Dialog | Qt::FramelessWindowHint);
-
+	obs_data_t* backupSettings = obs_data_create();
 	obs_data_t* sourceSettings = obs_source_get_settings(mSrc);
 
 	//保存进入窗口时source的设置值。不包含filter等附加属性
-	obs_data_t* backupSettings = obs_data_create();
 	obs_data_apply(backupSettings, sourceSettings);
 
 	mBackupSettings = backupSettings;
@@ -139,13 +138,6 @@ void BiLiPropertyDlg::InitUI()
 
 	ui.mSourceName->setText(QApplication::translate("BiLiPropertyDlg", "source name : "));
 
-	//新建源的时候已经什么都看不到了，下面这段代码洗洗睡吧
-#if 0
-	//新建源的时候，为了防止出现界面显示的内容和源实际内容不一致的情况
-	//（比如窗口源，界面上默认不是给出一个空的选项……因为空字符串匹配不到现有窗口的
-	if (mIsNewSource)
-		mSltOnSettingChanged();
-#endif
 
 	//连接截屏事件到主窗口
 	BiLiOBSMainWid *mainWnd = App()->mGetMainWindow();

@@ -1153,330 +1153,324 @@
     <CustomBuild Include="resources\ui\scalehoverwid.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\BiLiStyle.qss">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="Resources\Translation\biliobs_zh.ts">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="Resources\Translation\biliobs_zh.qm">
+    <CustomBuild Include="resources\icon_blue.ico" />
+    <CustomBuild Include="Resources\直播姬_官方蓝128.ico" />
+    <CustomBuild Include="Resources\直播姬_官方蓝48.ico" />
+    <CustomBuild Include="GeneratedFiles\ui_BiLiMsgDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="resource.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\barrage_history_control.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\barrage_history_db_control.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\barrage_history_db_control_interface.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\barrage_history_macro.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\BiliApiManager.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\BiliFilterUtility.hpp">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\bili_counter_trigger.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\bili_obs_source_helper.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\circle_slider_slider.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\effect_window_interface.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\flowlayout.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\HotkeyManager.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\oper_tip_dlg_factory.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\slider_input_accept_macro.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\spc_stride_slider.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\tasknamespace.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\timer_interface.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\wcs_weak_ref.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src_obs\audio-encoders.hpp">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src_obs\display-helpers.hpp">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src_obs\window-basic-main-outputs.hpp">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\BiliDanmakuHime.hpp">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\md5.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\base64.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\bili-thread-worker.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\BiliGlobalDatas.hpp">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\BiliOBSUtility.hpp">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\BiliUIConfigSync.hpp">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\bili_move_frameless_window.hpp">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src_obs\obs-app-api.hpp">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src_obs\platform.hpp">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src_obs\qt-wrappers.hpp">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\Translation\biliobs_zh.qm">
       <Filter>Form Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="Resources\UI\Img\xButton.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\bilibili_live_logo.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\minimalButton.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\config.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\bilibili_live_logo.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\configOver.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\config.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\micphone.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\configOver.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\micphoneOver.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\micphone.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\minimalButton.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\micphoneOver.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\removeButton.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\removeButton.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\removeButtonOver.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\removeButtonOver.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\sourceCamera.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\sourceCamera.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\sourceCameraOver.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\sourceCameraOver.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\sourceGame.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\sourceGame.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\sourceGameOver.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\sourceGameOver.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\sourceMonitor.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\sourceMonitor.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\sourceMonitorOver.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\sourceMonitorOver.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\sourcePicture.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\sourcePicture.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\sourcePictureOver.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\sourcePictureOver.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\sourceText.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\sourceText.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\sourceTextOver.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\sourceTextOver.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\sourceVideo.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\sourceVideo.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\sourceVideoOver.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\sourceVideoOver.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\sourceWindowBtn.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\sourceWindowBtn.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\sourceWindowBtnOver.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\sourceWindowBtnOver.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\volume.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\volume.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\volumeOver.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\UI\Img\volumeOver.png">
+    </CustomBuild>
+    <CustomBuild Include="Resources\UI\Img\xButton.png">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\直播姬_官方蓝48.ico" />
-    <Image Include="Resources\直播姬_官方蓝128.ico" />
-    <Image Include="resources\icon_blue.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="GeneratedFiles\ui_BiLiOBSMainWid.h">
+    </CustomBuild>
+    <CustomBuild Include="Resources\BiLiStyle.qss">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resources\Translation\biliobs_zh.ts">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_AdvancedSettingWid.h">
       <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_BiLiOBSSettingWid.h">
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_advsetttingbasedlg.h">
       <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_VideoSettingWid.h">
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_AudioDeviceSettingWid.h">
       <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src_obs\obs-app-api.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src_obs\qt-wrappers.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src_obs\platform.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src_obs\display-helpers.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_BiliNameDialog.h">
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_barrage_history.h">
       <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\bili_move_frameless_window.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\BiliOBSUtility.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\BiliUIConfigSync.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\BiliGlobalDatas.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\base64.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\bili-thread-worker.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\md5.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src_obs\audio-encoders.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src_obs\window-basic-main-outputs.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_BiLiAudioDevSettingWid.h">
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_bili-icon-msgdlg.h">
       <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_BiLiPropertyDlg.h">
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_BiLiAudioDevSettingWid.h">
       <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_AdvancedSettingWid.h">
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_BiliNameDialog.h">
       <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_AudioDeviceSettingWid.h">
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_BiLiOBSMainWid.h">
       <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\BiliDanmakuHime.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_BiLiMsgDlg.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_BiLiUserInfoWid.h">
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_BiLiOBSSettingWid.h">
       <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_PushStreamSettingWid.h">
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_BiLiPropertyDlg.h">
       <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_bili_area_tool.h">
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_BiLiUserInfoWid.h">
       <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\common\biliobs_path.h">
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_bili_area_tool.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_danmakudetailsettingwid.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_danmakudisplaysettingwid.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_danmakuhistorysettingwid.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_danmakuwid.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_HotkeyItemWid.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_HotkeySettingWid.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_HotkeyTriggeredNotice.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_net_status_wgt.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_oper_tip_broadcast_is_cut_off.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_oper_tip_config_used_and_pushed_content_wgt.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_oper_tip_cut_and_retry_content_wgt.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_oper_tip_dlg.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_oper_tip_duplicate_name_content_wgt.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_oper_tip_error_can_try_content_wgt.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_oper_tip_exit_content_wgt.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_oper_tip_hotkey_duplicate_content_wgt.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_oper_tip_link_error_simple_contentwgt.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_oper_tip_link_fail_content_wgt.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_oper_tip_need_repush_content_wgt.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_oper_tip_no_open_live_content_wgt.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_oper_tip_start_broad_fail_content_wgt.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_PushStreamSettingWid.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_scalehoverwid.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_suspendlockwid.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_system_inquiry_dlg.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_system_inquiry_style_one_content.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_system_inquiry_style_two_content.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_system_ret_info_dlg.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GeneratedFiles\ui_VideoSettingWid.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\common\biliobs_path.h">
       <Filter>common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\common\biliobs_paths.h">
+    </CustomBuild>
+    <CustomBuild Include="..\common\biliobs_paths.h">
       <Filter>common</Filter>
-    </ClInclude>
-    <ClInclude Include="src\bili_counter_trigger.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\BiliFilterUtility.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\circle_slider_slider.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_advsetttingbasedlg.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tasknamespace.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_danmakudisplaysettingwid.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_danmakudetailsettingwid.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\bili_obs_source_helper.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_net_status_wgt.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_barrage_history.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_bili-icon-msgdlg.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_HotkeySettingWid.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\spc_stride_slider.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_HotkeyItemWid.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\HotkeyManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_HotkeyTriggeredNotice.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\wcs_weak_ref.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\effect_window_interface.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_danmakuhistorysettingwid.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\slider_input_accept_macro.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\oper_tip_dlg_factory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_oper_tip_need_repush_content_wgt.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_oper_tip_link_error_simple_contentwgt.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_oper_tip_hotkey_duplicate_content_wgt.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_oper_tip_error_can_try_content_wgt.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_oper_tip_cut_and_retry_content_wgt.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_oper_tip_config_used_and_pushed_content_wgt.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_oper_tip_dlg.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_oper_tip_no_open_live_content_wgt.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_oper_tip_start_broad_fail_content_wgt.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_oper_tip_link_fail_content_wgt.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\barrage_history_macro.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\barrage_history_db_control.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\barrage_history_db_control_interface.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\barrage_history_control.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\timer_interface.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_oper_tip_duplicate_name_content_wgt.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_oper_tip_broadcast_is_cut_off.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_oper_tip_exit_content_wgt.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_system_ret_info_dlg.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_system_inquiry_style_one_content.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_system_inquiry_dlg.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_system_inquiry_style_two_content.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_danmakuwid.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_suspendlockwid.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_scalehoverwid.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\flowlayout.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\BiliApiManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resource.rc" />
