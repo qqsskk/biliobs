@@ -104,7 +104,7 @@ void RawDataManager::startWork()
 
     //connect(this, &RawDataManager::newMsg, this, &RawDataManager::localAppendMsg, Qt::QueuedConnection);
 
-    QString path = QString::fromStdWString(biliobs::GetUserDataPath());
+    QString path = QString::fromStdWString(hhsobs::GetUserDataPath());
     path.append(QString::fromStdString(gBili_mid)).append("\\").append(DB_NAME);
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");

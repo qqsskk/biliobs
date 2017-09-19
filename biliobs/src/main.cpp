@@ -50,7 +50,7 @@ void CreateDumpFile(LPCWSTR lpDumpFilePath, EXCEPTION_POINTERS *pE){
 LONG AppCrashHandleCallback(EXCEPTION_POINTERS *pE){
 
 
-	QString path = QString::fromStdWString(biliobs::GetDmpPath());
+	QString path = QString::fromStdWString(hhsobs::GetDmpPath());
 
 	wchar_t filePath[MAX_PATH] = { 0 };
 	QString fileName = QString("biliobs_%1_%2.dmp").arg(QDateTime::currentDateTime().toString("yyyyMMdd_hhmmss")).arg( QString::fromStdWString(gBili_fileVersion));
@@ -134,6 +134,7 @@ int main(int argc, char *argv[]) {
     base::CommandLine::Init(argc, argv);
     base::CommandLine* cmd_line = base::CommandLine::ForCurrentProcess();
 
+    //¿Í»§¶Ëµ¥Àý
 #ifdef WIN32
 	HANDLE instanceMutex = CreateMutexW(NULL, TRUE, InstanceMutexName);
 	if (GetLastError() == ERROR_ALREADY_EXISTS)

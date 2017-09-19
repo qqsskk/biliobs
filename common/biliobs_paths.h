@@ -3,7 +3,7 @@
 
 #include <string>
 
-namespace biliobs {
+namespace hhsobs {
     const std::wstring& GetUserDataPath();
     const std::wstring& GetRootPath();
 

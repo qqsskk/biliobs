@@ -30,7 +30,6 @@ int GetUserDataPath(char *path, size_t size, const char *name)
 bool do_mkdir(const char *path)
 {
 	if (os_mkdirs(path) == MKDIR_ERROR) {
-		OBSErrorBox(NULL, "Failed to create directory %s", path);
 		return false;
 	}
 

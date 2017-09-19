@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{5431cc36-92ca-4eed-8dc3-2e06b3f95a7d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\hhsObs.cpp" />
+    <ClCompile Include="src\stdafx.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\obs-app-api.cpp" />
+    <ClCompile Include="src\platform-windows.cpp" />
+    <ClCompile Include="..\common\biliobs_paths.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\hhsObs.h" />
+    <ClInclude Include="src\Resource.h" />
+    <ClInclude Include="src\stdafx.h" />
+    <ClInclude Include="src\targetver.h" />
+    <ClInclude Include="src\obs-app-api.hpp" />
+    <ClInclude Include="src\platform.hpp" />
+    <ClInclude Include="..\common\biliobs_path.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\biliobs_paths.h">
+      <Filter>common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\hhsObs.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

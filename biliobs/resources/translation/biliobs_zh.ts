@@ -561,7 +561,7 @@ content</source>
         <translation type="vanished">关闭弹幕</translation>
     </message>
     <message>
-        <source>You haven&apos;t apply BiliLive room</source>
+        <source>You haven&apos;t apply hhslive room</source>
         <translation type="vanished">您还没有开通Bilibili直播间</translation>
     </message>
     <message>

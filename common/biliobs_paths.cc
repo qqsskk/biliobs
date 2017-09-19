@@ -2,10 +2,10 @@
 #include <windows.h>
 #include <Shlobj.h>
 
-namespace biliobs {
+namespace hhsobs {
 
-#define kAPPDATA_FLODER_NAME             L"bililive"
-#define kAPPDATA_USERDATA_FLODER_NAME    L"bililive\\userdata"
+#define kAPPDATA_FLODER_NAME             L"hhslive"
+#define kAPPDATA_USERDATA_FLODER_NAME    L"hhslive\\userdata"
 #define DMP_FLODER_NAME                  L"dmp"
 
 class PathCache{

@@ -519,7 +519,7 @@ bool BiLiApp::mInitApp() {
 		if (!MakeBiliCommonDirs())
 			throw "Failed to create common directories";
 
-		IBiliAPI* biliApi = BiliAPIMan::GetInstance();
+		IBiliAPI* biliApi = NULL/*BiliAPIMan::GetInstance()*/;
 
 		HotkeyManager::InitializeInstance();
 		EnableMuteHotkeySupport();
