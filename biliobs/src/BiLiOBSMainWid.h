@@ -160,6 +160,8 @@ private:
 	ConfigFile    mBasicConfig;
 	os_inhibit_t  *mSleepInhibitor = nullptr;
 	OBSService    mService;
+
+    //Ö±²¥Ô´
 	std::unordered_map<obs_source_t*, int> mSourceSceneRefs;
 
 	bool mLoaded = false;

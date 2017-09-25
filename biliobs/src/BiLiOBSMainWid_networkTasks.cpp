@@ -9,9 +9,9 @@ void* BiLiOBSMainWid::mGetUserFacePixmapTask()
 {
 	try
 	{
-		BiliJsonPtr result = biliApi->MyInfo();
-		gBili_userName = result->GetVal<JSON_STRING>({ "uname" });
-		gBili_userFace = result->GetVal<JSON_STRING>({ "face" });
+		//BiliJsonPtr result = biliApi->MyInfo();
+        gBili_userName = "yuqingtong";//result->GetVal<JSON_STRING>({ "uname" });
+        gBili_userFace = ""; //result->GetVal<JSON_STRING>({ "face" });
 
 		std::vector<char> faceData = biliApi->GetFace(gBili_userFace);
 		QPixmap userFace;

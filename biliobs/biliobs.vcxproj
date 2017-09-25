@@ -526,6 +526,7 @@ xcopy /s/y/i/f "..\third_party_lib\directx_setup\*.dll" $(OutDir)</Command>
     <ClCompile Include="src\barrage_history_control.cpp" />
     <ClCompile Include="src\barrage_history_db_control.cpp" />
     <ClCompile Include="src\bili-icon-msgdlg.cpp" />
+    <ClCompile Include="src\BiliApiInstance.cpp" />
     <ClCompile Include="src\BiliApiManager.cpp" />
     <ClCompile Include="src\BiliFilterUtility.cpp" />
     <ClCompile Include="src\BiLiOBSMainWid_addSource.cpp" />
@@ -3570,6 +3571,9 @@ xcopy /s/y/i/f "..\third_party_lib\directx_setup\*.dll" $(OutDir)</Command>
   <ItemGroup>
     <ResourceCompile Include="..\build\buildcfg\versionno.rc" />
     <ResourceCompile Include="Resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\BiliApiInstance.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

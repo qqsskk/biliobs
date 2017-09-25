@@ -809,6 +809,9 @@
     <ClCompile Include="src\BiliApiManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\BiliApiInstance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="src\BiLiApp.h">
@@ -1475,5 +1478,10 @@
   <ItemGroup>
     <ResourceCompile Include="Resource.rc" />
     <ResourceCompile Include="..\build\buildcfg\versionno.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\BiliApiInstance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
