@@ -1,4 +1,4 @@
-/******************************************************************************
+﻿/******************************************************************************
     Copyright (C) 2013-2014 by Hugh Bailey <obs.jim@gmail.com>
 
     This program is free software: you can redistribute it and/or modify
@@ -92,8 +92,10 @@ typedef struct obs_weak_service obs_weak_service_t;
 extern "C" {
 #endif
 
-/** Used for changing the order of items (for example, filters in a source,
- * or items in a scene) */
+/** 
+* Used for changing the order of items (for example, filters in a source,or items in a scene)
+* 用于更改项目顺序（例如，源中的过滤器，*或场景中的项目）
+*/
 enum obs_order_movement {
 	OBS_ORDER_MOVE_UP,
 	OBS_ORDER_MOVE_DOWN,
@@ -105,6 +107,9 @@ enum obs_order_movement {
  * Used with obs_source_process_filter to specify whether the filter should
  * render the source directly with the specified effect, or whether it should
  * render it to a texture
+ * 与obs_source_process_filter一起使用以指定过滤器是否应该
+ * 直接用指定的效果渲染源，或者是否应该
+ * 将其渲染成纹理
  */
 enum obs_allow_direct_render {
 	OBS_NO_DIRECT_RENDERING,
@@ -121,6 +126,9 @@ enum obs_scale_type {
  * Used with scene items to indicate the type of bounds to use for scene items.
  * Mostly determines how the image will be scaled within those bounds, or
  * whether to use bounds at all.
+ * 与场景项目一起使用以指示场景项目使用的边界类型。
+ * 主要决定图像在这些边界内的缩放方式，或者
+ * 是否使用边界。
  */
 enum obs_bounds_type {
 	OBS_BOUNDS_NONE,            /**< no bounds */
@@ -145,6 +153,7 @@ struct obs_transform_info {
 
 /**
  * Video initialization structure
+ * 视频初始化结构
  */
 struct obs_video_info {
 	/**
@@ -152,8 +161,8 @@ struct obs_video_info {
 	 */
 	const char          *graphics_module;
 
-	uint32_t            fps_num;       /**< Output FPS numerator */
-	uint32_t            fps_den;       /**< Output FPS denominator */
+	uint32_t            fps_num;       /**< Output FPS numerator 输出帧率分母*/
+	uint32_t            fps_den;       /**< Output FPS denominator 输出帧率分子*/
 
 	uint32_t            base_width;    /**< Base compositing width */
 	uint32_t            base_height;   /**< Base compositing height */
@@ -176,6 +185,7 @@ struct obs_video_info {
 
 /**
  * Audio initialization structure
+ * 音频初始化结构
  */
 struct obs_audio_info {
 	uint32_t            samples_per_sec;
@@ -185,6 +195,7 @@ struct obs_audio_info {
 
 /**
  * Sent to source filters via the filter_audio callback to allow filtering of
+ * 通过filter_audio回调发送到源过滤器以允许过滤
  * audio data
  */
 struct obs_audio_data {
@@ -1216,37 +1227,58 @@ EXPORT obs_data_t *obs_output_get_settings(const obs_output_t *output);
 EXPORT signal_handler_t *obs_output_get_signal_handler(
 		const obs_output_t *output);
 
-/** Returns the procedure handler for an output */
+/*
+* Returns the procedure handler for an output 
+* 返回输出的过程处理程序
+*/
 EXPORT proc_handler_t *obs_output_get_proc_handler(const obs_output_t *output);
 
 /**
  * Sets the current video media context associated with this output,
  * required for non-encoded outputs
+ * 设置与此输出相关的当前视频媒体上下文，
+ * 非编码输出所需
  */
 EXPORT void obs_output_set_video(obs_output_t *output, video_t *video);
 
 /**
  * Sets the current audio/video media contexts associated with this output,
  * required for non-encoded outputs.  Can be null.
+ * 设置与输出相关的当前音频/视频媒体上下文，
+ * 非编码输出所需。可以为空。
  */
 EXPORT void obs_output_set_media(obs_output_t *output,
 		video_t *video, audio_t *audio);
 
-/** Returns the video media context associated with this output */
+/*
+* Returns the video media context associated with this output 
+* 返回与此输出相关的视频媒体上下文
+*/
 EXPORT video_t *obs_output_video(const obs_output_t *output);
 
-/** Returns the audio media context associated with this output */
+/*
+* Returns the audio media context associated with this output 
+* 返回与此输出相关的音频媒体上下文
+*/
 EXPORT audio_t *obs_output_audio(const obs_output_t *output);
 
-/** Sets the current audio mixer for non-encoded outputs */
+/*
+* Sets the current audio mixer for non-encoded outputs 
+* 设置非编码输出的当前音频混频器
+*/
 EXPORT void obs_output_set_mixer(obs_output_t *output, size_t mixer_idx);
 
-/** Gets the current audio mixer for non-encoded outputs */
+/*
+* Gets the current audio mixer for non-encoded outputs 、
+* 获取非编码输出的当前音频混频器
+*/
 EXPORT size_t obs_output_get_mixer(const obs_output_t *output);
 
 /**
  * Sets the current video encoder associated with this output,
  * required for encoded outputs
+ * 设置与输出相关的当前视频编码器，
+ * 编码输出所需
  */
 EXPORT void obs_output_set_video_encoder(obs_output_t *output,
 		obs_encoder_t *encoder);
@@ -1258,11 +1290,19 @@ EXPORT void obs_output_set_video_encoder(obs_output_t *output,
  * The idx parameter specifies the audio encoder index to set the encoder to.
  * Only used with outputs that have multiple audio outputs (RTMP typically),
  * otherwise the parameter is ignored.
+
+ *设置与输出相关的当前音频编码器，编码输出所需。
+ *
+ * idx参数指定音频编码器索引来设置编码器。
+ *只使用具有多个音频输出的输出(通常为RTMP)，否则，参数将被忽略。
  */
 EXPORT void obs_output_set_audio_encoder(obs_output_t *output,
 		obs_encoder_t *encoder, size_t idx);
 
-/** Returns the current video encoder associated with this output */
+/*
+* Returns the current video encoder associated with this output 
+* 返回与输出相关的当前视频编码器
+*/
 EXPORT obs_encoder_t *obs_output_get_video_encoder(const obs_output_t *output);
 
 /**
@@ -1271,19 +1311,30 @@ EXPORT obs_encoder_t *obs_output_get_video_encoder(const obs_output_t *output);
  * The idx parameter specifies the audio encoder index.  Only used with
  * outputs that have multiple audio outputs, otherwise the parameter is
  * ignored.
+
+ *返回与输出相关的当前音频编码器
+ *
+ * idx参数指定音频编码器索引。只使用输出有多个音频输出，否则参数为忽略。
  */
 EXPORT obs_encoder_t *obs_output_get_audio_encoder(const obs_output_t *output,
 		size_t idx);
 
-/** Sets the current service associated with this output. */
+/*
+* Sets the current service associated with this output. 
+* 设置与此输出相关的当前服务。
+*/
 EXPORT void obs_output_set_service(obs_output_t *output,
 		obs_service_t *service);
 
-/** Gets the current service associated with this output. */
+/*
+* Gets the current service associated with this output. 
+* 获取与此输出相关的当前服务。
+*/
 EXPORT obs_service_t *obs_output_get_service(const obs_output_t *output);
 
 /**
  * Sets the reconnect settings.  Set retry_count to 0 to disable reconnecting.
+ * 设置重新设置。将retry_count设置为0，以禁用重新连接。
  */
 EXPORT void obs_output_set_reconnect_settings(obs_output_t *output,
 		int retry_count, int retry_sec);
@@ -1299,34 +1350,61 @@ EXPORT int obs_output_get_total_frames(const obs_output_t *output);
  * If this output uses an encoder, it will call obs_encoder_set_scaled_size on
  * the encoder before the stream is started.  If the encoder is already active,
  * then this function will trigger a warning and do nothing.
+
+ * 设置该输出的首选比例分辨率。设置宽度和高度
+ * 到0禁用缩放。
+ *
+ * 如果这个输出使用编码器，它将调用痴迷的set_scaled_size
+ * 在流开始之前编码器。如果编码器已经激活，然后这个函数会触发警告，什么都不做。
  */
 EXPORT void obs_output_set_preferred_size(obs_output_t *output, uint32_t width,
 		uint32_t height);
 
-/** For video outputs, returns the width of the encoded image */
+/*
+* For video outputs, returns the width of the encoded image
+* 对于视频输出，返回编码图像的宽度
+*/
 EXPORT uint32_t obs_output_get_width(const obs_output_t *output);
 
-/** For video outputs, returns the height of the encoded image */
+/*
+* For video outputs, returns the height of the encoded image 
+* 对于视频输出，返回编码图像的高度
+*/
 EXPORT uint32_t obs_output_get_height(const obs_output_t *output);
 
 /* ------------------------------------------------------------------------- */
-/* Functions used by outputs */
+/* 
+* Functions used by outputs 
+* 输出所使用的函数
+*/
 
 EXPORT void *obs_output_get_type_data(obs_output_t *output);
 
-/** Optionally sets the video conversion info.  Used only for raw output */
+/*
+* Optionally sets the video conversion info.  Used only for raw output 
+* 可选设置视频转换信息。只用于原始输出
+*/
 EXPORT void obs_output_set_video_conversion(obs_output_t *output,
 		const struct video_scale_info *conversion);
 
-/** Optionally sets the audio conversion info.  Used only for raw output */
+/*
+* Optionally sets the audio conversion info.  Used only for raw output 
+* 可选设置音频转换信息。只用于原始输出
+*/
 EXPORT void obs_output_set_audio_conversion(obs_output_t *output,
 		const struct audio_convert_info *conversion);
 
-/** Returns whether data capture can begin with the specified flags */
+/*
+* Returns whether data capture can begin with the specified flags 
+* 返回数据捕获是否可以从指定的标志开始
+*/
 EXPORT bool obs_output_can_begin_data_capture(const obs_output_t *output,
 		uint32_t flags);
 
-/** Initializes encoders (if any) */
+/*
+* Initializes encoders (if any) 
+* 初始化编码器(如果有的话)
+*/
 EXPORT bool obs_output_initialize_encoders(obs_output_t *output,
 		uint32_t flags);
 
@@ -1341,10 +1419,23 @@ EXPORT bool obs_output_initialize_encoders(obs_output_t *output,
  *                 ffmpeg which may or may not always want to use both audio
  *                 and video.
  * @return         true if successful, false otherwise.
+
+ *  从媒体/编码器开始数据捕捉。
+ *
+ * @ param输出输出上下文
+ * @ param标志将其设置为0，以使用设置在的默认输出标志
+ * 痴迷于output_info结构，否则设置为a
+ * 痴迷于put_video或痴迷于put_audio来指定是否
+ * 连接音频或视频。这对类似的事情很有用
+ * ffmpeg可能或不总是想同时使用这两种音频和视频。
+ * 如果成功，则返回true，否则为false。
  */
 EXPORT bool obs_output_begin_data_capture(obs_output_t *output, uint32_t flags);
 
-/** Ends data capture from media/encoders */
+/*
+* Ends data capture from media/encoders 
+* 结束从媒体/编码器捕获的数据
+*/
 EXPORT void obs_output_end_data_capture(obs_output_t *output);
 
 /**
@@ -1352,6 +1443,10 @@ EXPORT void obs_output_end_data_capture(obs_output_t *output);
  *
  * @param  output  Output context
  * @param  code    Error code (or OBS_OUTPUT_SUCCESS if not an error)
+ * 输出已经停止的信号。
+ *
+ * @ param输出输出上下文
+ * @ param代码错误代码(如果不是错误的话，也可以使用痴迷的方法)
  */
 EXPORT void obs_output_signal_stop(obs_output_t *output, int code);
 
@@ -1374,6 +1469,7 @@ EXPORT obs_encoder_t *obs_video_encoder_create(const char *id, const char *name,
 
 /**
  * Creates an audio encoder context
+ * 创建一个音频编码器上下文
  *
  * @param  id        Audio Encoder ID
  * @param  name      Name to assign to this context
@@ -1388,6 +1484,8 @@ EXPORT obs_encoder_t *obs_audio_encoder_create(const char *id, const char *name,
 /**
  * Adds/releases a reference to an encoder.  When the last reference is
  * released, the encoder is destroyed.
+ * 添加/发布对编码器的引用。当最后的引用是
+ * 释放，编码器被摧毁。
  */
 EXPORT void obs_encoder_addref(obs_encoder_t *encoder);
 EXPORT void obs_encoder_release(obs_encoder_t *encoder);
@@ -1405,33 +1503,57 @@ EXPORT bool obs_weak_encoder_references_encoder(obs_weak_encoder_t *weak,
 EXPORT void obs_encoder_set_name(obs_encoder_t *encoder, const char *name);
 EXPORT const char *obs_encoder_get_name(const obs_encoder_t *encoder);
 
-/** Returns the codec of an encoder by the id */
+/*
+* Returns the codec of an encoder by the id 
+* 以id返回编码器的编解码器
+*/
 EXPORT const char *obs_get_encoder_codec(const char *id);
 
-/** Returns the type of an encoder by the id */
+/*
+* Returns the type of an encoder by the id 
+* 通过id返回编码器的类型
+*/
 EXPORT enum obs_encoder_type obs_get_encoder_type(const char *id);
 
-/** Returns the codec of the encoder */
+/*
+* Returns the codec of the encoder 
+* 返回编解码器的ID
+*/
 EXPORT const char *obs_encoder_get_codec(const obs_encoder_t *encoder);
 
-/** Returns the type of an encoder */
+/*
+* Returns the type of an encoder
+* 返回编码器的类型
+*/
 EXPORT enum obs_encoder_type obs_encoder_get_type(const obs_encoder_t *encoder);
 
 /**
  * Sets the scaled resolution for a video encoder.  Set width and height to 0
  * to disable scaling.  If the encoder is active, this function will trigger
  * a warning, and do nothing.
+ * 设置视频编码器的缩放分辨率。设置宽度和高度为0
+ * 禁用扩展。如果编码器是活动的，这个函数将触发
+ * 警告，什么都不做。
  */
 EXPORT void obs_encoder_set_scaled_size(obs_encoder_t *encoder, uint32_t width,
 		uint32_t height);
 
-/** For video encoders, returns the width of the encoded image */
+/*
+* For video encoders, returns the width of the encoded image 
+* 对于视频编码器，返回编码图像的宽度
+*/
 EXPORT uint32_t obs_encoder_get_width(const obs_encoder_t *encoder);
 
-/** For video encoders, returns the height of the encoded image */
+/*
+* For video encoders, returns the height of the encoded image
+* 对于视频编码器，返回编码图像的高度
+*/
 EXPORT uint32_t obs_encoder_get_height(const obs_encoder_t *encoder);
 
-/** For audio encoders, returns the sample rate of the audio */
+/*
+* For audio encoders, returns the sample rate of the audio
+* 对于音频编码器，返回音频的采样率
+*/
 EXPORT uint32_t obs_encoder_get_sample_rate(const obs_encoder_t *encoder);
 
 /**
@@ -1441,61 +1563,100 @@ EXPORT uint32_t obs_encoder_get_sample_rate(const obs_encoder_t *encoder);
  *
  * If the format is set to VIDEO_FORMAT_NONE, will revert to the default
  * functionality of converting only when absolutely necessary.
+
+ * 设置视频编码器的首选视频格式。如果编码器可以使用
+ * 指定的格式，如果需要，将强制转换为该格式
+ * obs输出格式与首选格式不匹配。
+ *
+ * 如果格式设置为VIDEO_FORMAT_NONE，将恢复到默认值
+ * 只有在绝对必要时才会转换功能。
  */
 EXPORT void obs_encoder_set_preferred_video_format(obs_encoder_t *encoder,
 		enum video_format format);
+
 EXPORT enum video_format obs_encoder_get_preferred_video_format(
 		const obs_encoder_t *encoder);
 
-/** Gets the default settings for an encoder type */
+/*
+* Gets the default settings for an encoder type 
+* 获取编码器类型的默认设置
+*/
 EXPORT obs_data_t *obs_encoder_defaults(const char *id);
 
-/** Returns the property list, if any.  Free with obs_properties_destroy */
+/*
+* Returns the property list, if any.  Free with obs_properties_destroy 
+* 返回属性列表，如果有的话。使用obs_properties_destroy释放
+*/
 EXPORT obs_properties_t *obs_get_encoder_properties(const char *id);
 
 /**
  * Returns the property list of an existing encoder, if any.  Free with
  * obs_properties_destroy
+ * 返回现有编码器的属性列表，如果有的话。使用obs_properties_destroy释放
  */
 EXPORT obs_properties_t *obs_encoder_properties(const obs_encoder_t *encoder);
 
 /**
  * Updates the settings of the encoder context.  Usually used for changing
  * bitrate while active
+ * 更新编码器上下文的设置。通常用于改变
+ * 比特率而活跃
  */
 EXPORT void obs_encoder_update(obs_encoder_t *encoder, obs_data_t *settings);
 
-/** Gets extra data (headers) associated with this context */
+/*
+* Gets extra data (headers) associated with this context 
+* 获取与此上下文相关的额外数据(header)
+*/
 EXPORT bool obs_encoder_get_extra_data(const obs_encoder_t *encoder,
 		uint8_t **extra_data, size_t *size);
 
-/** Returns the current settings for this encoder */
+/*
+* Returns the current settings for this encoder
+* 返回该编码器的当前设置
+*/
 EXPORT obs_data_t *obs_encoder_get_settings(const obs_encoder_t *encoder);
 
-/** Sets the video output context to be used with this encoder */
+/*
+* Sets the video output context to be used with this encoder 
+* 设置视频输出上下文与编码器一起使用
+*/
 EXPORT void obs_encoder_set_video(obs_encoder_t *encoder, video_t *video);
 
-/** Sets the audio output context to be used with this encoder */
+/*
+* Sets the audio output context to be used with this encoder 
+* 设置音频输出上下文与编码器一起使用
+*/
 EXPORT void obs_encoder_set_audio(obs_encoder_t *encoder, audio_t *audio);
 
 /**
  * Returns the video output context used with this encoder, or NULL if not
  * a video context
+ * 返回与编码器使用的视频输出上下文，如果不是，则返回NULL
+ * 一个视频上下文
  */
 EXPORT video_t *obs_encoder_video(const obs_encoder_t *encoder);
 
 /**
  * Returns the audio output context used with this encoder, or NULL if not
  * a audio context
+ * 返回与编码器使用的音频输出上下文，如果不是，则返回NULL
+ * 一个音频上下文
  */
 EXPORT audio_t *obs_encoder_audio(const obs_encoder_t *encoder);
 
-/** Returns true if encoder is active, false otherwise */
+/*
+* Returns true if encoder is active, false otherwise
+* 如果编码器是激活的，则返回true，否则为false
+*/
 EXPORT bool obs_encoder_active(const obs_encoder_t *encoder);
 
 EXPORT void *obs_encoder_get_type_data(obs_encoder_t *encoder);
 
-/** Duplicates an encoder packet */
+/*
+* Duplicates an encoder packet 
+* 复制编码器包
+*/
 EXPORT void obs_duplicate_encoder_packet(struct encoder_packet *dst,
 		const struct encoder_packet *src);
 
@@ -1513,6 +1674,8 @@ EXPORT obs_service_t *obs_service_create(const char *id, const char *name,
 /**
  * Adds/releases a reference to a service.  When the last reference is
  * released, the service is destroyed.
+ * 添加/发布对服务的引用。当最后的引用是
+ * 发布，服务被销毁。
  */
 EXPORT void obs_service_addref(obs_service_t *service);
 EXPORT void obs_service_release(obs_service_t *service);
@@ -1529,37 +1692,65 @@ EXPORT bool obs_weak_service_references_service(obs_weak_service_t *weak,
 
 EXPORT const char *obs_service_get_name(const obs_service_t *service);
 
-/** Gets the default settings for a service */
+/*
+* Gets the default settings for a service 
+* 获取服务的默认设置
+*/
 EXPORT obs_data_t *obs_service_defaults(const char *id);
 
-/** Returns the property list, if any.  Free with obs_properties_destroy */
+/*
+* Returns the property list, if any.  Free with obs_properties_destroy
+* 返回属性列表，如果有的话。使用obs_properties_destroy释放
+*/
 EXPORT obs_properties_t *obs_get_service_properties(const char *id);
 
 /**
  * Returns the property list of an existing service context, if any.  Free with
  * obs_properties_destroy
+ * 返回现有服务上下文的属性列表，如果有的话。使用obs_properties_destroy释放 
  */
 EXPORT obs_properties_t *obs_service_properties(const obs_service_t *service);
 
-/** Gets the service type */
+/*
+* Gets the service type 
+* 获取服务类型
+*/
 EXPORT const char *obs_service_get_type(const obs_service_t *service);
 
-/** Updates the settings of the service context */
+/*
+* Updates the settings of the service context 
+* 更新服务上下文的设置
+*/
 EXPORT void obs_service_update(obs_service_t *service, obs_data_t *settings);
 
-/** Returns the current settings for this service */
+/*
+* Returns the current settings for this service 
+* 返回该服务的当前设置
+*/
 EXPORT obs_data_t *obs_service_get_settings(const obs_service_t *service);
 
-/** Returns the URL for this service context */
+/*
+* Returns the URL for this service context 
+* 返回该服务上下文的URL
+*/
 EXPORT const char *obs_service_get_url(const obs_service_t *service);
 
-/** Returns the stream key (if any) for this service context */
+/*
+* Returns the stream key (if any) for this service context
+* 返回该服务上下文的流键(如果有的话)
+*/
 EXPORT const char *obs_service_get_key(const obs_service_t *service);
 
-/** Returns the username (if any) for this service context */
+/*
+* Returns the username (if any) for this service context 
+* 为该服务上下文返回用户名(如果有的话)
+*/
 EXPORT const char *obs_service_get_username(const obs_service_t *service);
 
-/** Returns the password (if any) for this service context */
+/*
+* Returns the password (if any) for this service context
+* 为该服务上下文返回密码(如果有的话)
+*/
 EXPORT const char *obs_service_get_password(const obs_service_t *service);
 
 /**
@@ -1567,6 +1758,10 @@ EXPORT const char *obs_service_get_password(const obs_service_t *service);
  *
  * @param  video_encoder_settings  Video encoder settings.  Optional.
  * @param  audio_encoder_settings  Audio encoder settings.  Optional.
+ * 应用特定于服务的视频编码器设置。
+ *
+ * @param video_encoder_settings视频编码器设置。可选的。
+ * @param audio_encoder_settings音频编码器设置。可选的。
  */
 EXPORT void obs_service_apply_encoder_settings(obs_service_t *service,
 		obs_data_t *video_encoder_settings,
@@ -1576,7 +1771,10 @@ EXPORT void *obs_service_get_type_data(obs_service_t *service);
 
 
 /* ------------------------------------------------------------------------- */
-/* Source frame allocation functions */
+/* 
+* Source frame allocation functions 
+* 源帧分配功能
+*/
 EXPORT void obs_source_frame_init(struct obs_source_frame *frame,
 		enum video_format format, uint32_t width, uint32_t height);
 
