@@ -77,10 +77,11 @@
     </Lib>
     <Link>
       <ModuleDefinitionFile>jansson.def</ModuleDefinitionFile>
+      <ImportLibrary>$(OutDir)lib\$(TargetName).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>cd /d $(OutDir)
-copy /y $(OutDir)$(TargetName).lib $(OutDir)lib\$(TargetName).lib</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -118,10 +119,11 @@ copy /y $(OutDir)$(TargetName).lib $(OutDir)lib\$(TargetName).lib</Command>
     </Lib>
     <Link>
       <ModuleDefinitionFile>jansson.def</ModuleDefinitionFile>
+      <ImportLibrary>$(OutDir)lib\$(TargetName).lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>cd /d $(OutDir)
-copy /y $(OutDir)$(TargetName).lib $(OutDir)lib\$(TargetName).lib</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

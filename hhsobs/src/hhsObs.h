@@ -1,6 +1,5 @@
 #pragma once
-#include "obs-app-api.hpp"
-
+#include "util/util.hpp"
 /*
 *推流工具全局函数
 */
@@ -8,25 +7,16 @@
 class hhsObsApp
 {
 public:
-    hhsObsApp(int &argc, char **argv);
+    hhsObsApp();
     ~hhsObsApp();
 public:
-    bool mInitApp();
-    TextLookup textLookup_;
-    inline const char* GetString(const char *lookupVal) const { return textLookup_.GetString(lookupVal); }
-    inline config_t* GetGlobalConfig() const { return GlobalConfig_; }
-    profiler_name_store_t* GetProfilerNameStore() const { return ProfilerNameStore_; }
-
-    const char* mGetRenderModule() const;
-
-    const char* InputAudioSource() const;
-    const char* OutputAudioSource() const;
+    bool InitGlobalConfig(const std::string& strglobal);
+    bool LoadAllModule();
 private:
-    bool OBSInit();
-    bool OBSInitGlobalConfig();
-    bool OBSInitGlobalConfigDefaults();
-private:
-    ConfigFile GlobalConfig_;
+    ConfigFile GlobalCfg_;//全局配置文件
     profiler_name_store_t* ProfilerNameStore_ = nullptr;
     std::string locale_;
 };
+
+//加载全部模块
+void LoadAllModule();

@@ -29,6 +29,9 @@
 #include <vector>
 #include <list>
 
+#include "hhsObs_Common.h"
+#include "hhsObs_Path.h"
 
 //°üº¬libobs
+#include "obs.h"
 #include "obs.hpp"

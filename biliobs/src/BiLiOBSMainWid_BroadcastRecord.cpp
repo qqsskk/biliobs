@@ -457,24 +457,24 @@ void* BiLiOBSMainWid::mRetriveUserInfo()
 	{
 		//获取房间信息
 		BiliJsonPtr roomInfoResult = biliApi->GetRoomInfo(lexical_cast<int>(gBili_mid));
-
+		
 		int code = roomInfoResult->GetVal<JSON_INTEGER>({ "code" });
 		if (code < 0)
 		{
 			//获取房间信息失败
 			throw BiliCustomException(code, roomInfoResult->GetVal<JSON_STRING>({ "msg" }));
 		}
-
+		
 		succeed = true;
-
+		
 		//填写用户名和房间信息
 		//biliUi->usernameButton->setText(roomInfoResult->GetVal<JSON_STRING>({ "data", "uname" }).c_str());
 		gBili_roomId = roomInfoResult->GetVal<JSON_INTEGER>({ "data", "roomId" });
-
+		
 		//获取弹幕服务器地址
 		BiliJsonPtr apiRoomInfoResult = biliApi->GetAPIRoomInfo(gBili_roomId);
 		gBili_danmakuServer = apiRoomInfoResult->GetVal<JSON_STRING>({ "data", "cmt" });
-
+		
 		QMetaObject::invokeMethod(broadcastButtonOperator.get(), "SetNormalIdle");
 	}
 	catch (BiliCustomException& customException)

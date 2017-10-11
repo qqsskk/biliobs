@@ -537,7 +537,7 @@ bool BiLiApp::mInitApp() {
 
 		if (!mOBSInit())
 			return false;
-		mBiLiOBSMainWid = new BiLiOBSMainWid(biliApi);	//create main widget and set it's shadow wid
+		mBiLiOBSMainWid = new BiLiOBSMainWid(NULL);	//create main widget and set it's shadow wid
 		mBiLiOBSMainWid->setAttribute(Qt::WA_DeleteOnClose);
 		mBiLiOBSMainWid->mOBSInit();
 		mBiLiOBSMainWid->setAttribute(Qt::WidgetAttribute::WA_DeleteOnClose);

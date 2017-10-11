@@ -13,9 +13,10 @@
     <ClCompile Include="src\hhsObs.cpp" />
     <ClCompile Include="src\stdafx.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\obs-app-api.cpp" />
-    <ClCompile Include="src\platform-windows.cpp" />
-    <ClCompile Include="..\common\biliobs_paths.cc">
+    <ClCompile Include="..\common\hhsObs_Common.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\hhsObs_Path.cpp">
       <Filter>common</Filter>
     </ClCompile>
   </ItemGroup>
@@ -24,12 +25,10 @@
     <ClInclude Include="src\Resource.h" />
     <ClInclude Include="src\stdafx.h" />
     <ClInclude Include="src\targetver.h" />
-    <ClInclude Include="src\obs-app-api.hpp" />
-    <ClInclude Include="src\platform.hpp" />
-    <ClInclude Include="..\common\biliobs_path.h">
+    <ClInclude Include="..\common\hhsObs_Common.h">
       <Filter>common</Filter>
     </ClInclude>
-    <ClInclude Include="..\common\biliobs_paths.h">
+    <ClInclude Include="..\common\hhsObs_Path.h">
       <Filter>common</Filter>
     </ClInclude>
   </ItemGroup>
