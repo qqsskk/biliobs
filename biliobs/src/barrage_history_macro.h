@@ -1,7 +1,0 @@
-
-#ifndef BARRAGE_HISTORY_MACRO_H
-#define BARRAGE_HISTORY_MACRO_H
-
-#define LIMIT_PER_PAGE 60
-
-#endif
