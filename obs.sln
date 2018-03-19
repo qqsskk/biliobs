@@ -10,10 +10,26 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "(third_party)", "(third_party)", "{BFFF0C35-6C06-4354-8F2B-FCE27D849176}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libobs", "libobs\libobs.vcxproj", "{2E77904B-BCEF-3648-9EDD-D9CB1E0D9E37}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0FCD8437-BE25-351A-9F27-361A43DF55F3} = {0FCD8437-BE25-351A-9F27-361A43DF55F3}
+		{DB4C1A50-D771-3EEE-88E2-756B4FCBDD03} = {DB4C1A50-D771-3EEE-88E2-756B4FCBDD03}
+		{80AA0E75-073C-3786-9B5B-7C53C2541BE5} = {80AA0E75-073C-3786-9B5B-7C53C2541BE5}
+		{4F1DBA7C-F890-4789-2BE9-1621AF1FF1EC} = {4F1DBA7C-F890-4789-2BE9-1621AF1FF1EC}
+		{41152D95-C2A4-3E39-A77C-4F85567A5E59} = {41152D95-C2A4-3E39-A77C-4F85567A5E59}
+		{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B} = {78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}
+		{B5810ED8-6B78-372C-8219-E69F2930D198} = {B5810ED8-6B78-372C-8219-E69F2930D198}
+		{C48C27FD-D45C-369A-99B3-9EC9AB0EFCEA} = {C48C27FD-D45C-369A-99B3-9EC9AB0EFCEA}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libobs-d3d11", "libobs-d3d11\libobs-d3d11.vcxproj", "{33D3DF3E-5132-34ED-81E9-6E5B5DC6114C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2E77904B-BCEF-3648-9EDD-D9CB1E0D9E37} = {2E77904B-BCEF-3648-9EDD-D9CB1E0D9E37}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libobs-opengl", "libobs-opengl\libobs-opengl.vcxproj", "{022A1760-5391-3DA9-8708-0CDE0BA8771E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2E77904B-BCEF-3648-9EDD-D9CB1E0D9E37} = {2E77904B-BCEF-3648-9EDD-D9CB1E0D9E37}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "(ffmpeg)", "(ffmpeg)", "{996A5BD6-B1CC-4536-AF61-E3C144BB70C0}"
 EndProject
@@ -24,6 +40,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "(wincaptrue)", "(wincaptrue)", "{D081B842-7AFD-4378-9919-BF706584856D}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "win-capture", "plugins\win-capture\win-capture.vcxproj", "{51456AC5-B968-35FD-89EE-C7F970172D0F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2E77904B-BCEF-3648-9EDD-D9CB1E0D9E37} = {2E77904B-BCEF-3648-9EDD-D9CB1E0D9E37}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "inject-helper64", "plugins\win-capture\inject-helper\inject-helper-64.vcxproj", "{39CC3F13-E6B5-4FF0-9E58-A9DE5A01D656}"
 EndProject
@@ -58,8 +77,14 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "win-wasapi", "plugins\win-wasapi\win-wasapi.vcxproj", "{7AA1811D-4E96-3009-8D25-B6BABCDDAB9E}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "win-decklink", "plugins\decklink\win\win-decklink.vcxproj", "{595CB95C-9595-3085-8EA6-6984ADE715EE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2E77904B-BCEF-3648-9EDD-D9CB1E0D9E37} = {2E77904B-BCEF-3648-9EDD-D9CB1E0D9E37}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rtmp-services", "plugins\rtmp-services\rtmp-services.vcxproj", "{C99ED868-C44E-3CA6-8E36-93F475DF9E00}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2E77904B-BCEF-3648-9EDD-D9CB1E0D9E37} = {2E77904B-BCEF-3648-9EDD-D9CB1E0D9E37}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "image-source", "plugins\image-source\image-source.vcxproj", "{72F1C1D8-F7C2-3BD2-966F-45C2FDC897F7}"
 EndProject
