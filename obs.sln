@@ -106,6 +106,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "third_party\zlib\zl
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "w32-pthreads", "third_party\w32-pthreads\w32-pthreads.vcxproj", "{B5810ED8-6B78-372C-8219-E69F2930D198}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "(build)", "(build)", "{C3D707EE-7AAE-4AEF-9C77-71F8A7058317}"
+	ProjectSection(SolutionItems) = preProject
+		build\buildcfg\buildcfg.h = build\buildcfg\buildcfg.h
+		build\buildcfg\buildversion.h = build\buildcfg\buildversion.h
+		build\buildcfg\UAC.manifest = build\buildcfg\UAC.manifest
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Mixed Platforms = Debug|Mixed Platforms

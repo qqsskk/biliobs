@@ -31,21 +31,21 @@
 
 #ifdef BUILD_BILIOBS_EXE
 #pragma message("\t    BILIOBS_EXE")
-#define VI_FILEDESCRIPTION	"Biliobs 主模块"
-#define VI_INTERNALNAME		"biliobs.exe"
-#define VI_ORIGINALFILENAME	"biliobs.exe"
+#define VI_FILEDESCRIPTION	"OBS 主模块"
+#define VI_INTERNALNAME		"OBS.exe"
+#define VI_ORIGINALFILENAME	"OBS.exe"
 #endif
 
 
 
 #ifndef VI_FILEDESCRIPTION
 #pragma error("not defined")
-#define VI_FILEDESCRIPTION	  "Biliobs Module"
+#define VI_FILEDESCRIPTION	  "OBS Module"
 #define VI_INTERNALNAME		  ""
 #define VI_ORIGINALFILENAME	  ""
 #endif 
 #ifndef VI_PRODUCT_NAME
-  #define VI_PRODUCT_NAME	"Biliobs"
+  #define VI_PRODUCT_NAME	"obs"
 #endif
 
 #endif /* __BUILD_BUILDCFG_BUILDCFG_H__ */

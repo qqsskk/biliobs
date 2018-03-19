@@ -1,2 +1,2 @@
-#define VI_FILE_VERSION 0,7,1,0
-#define VI_FILE_VERSION_DOT "0.7.1.0"
+#define VI_FILE_VERSION 1,0,0,0
+#define VI_FILE_VERSION_DOT "1,0,0,0"
