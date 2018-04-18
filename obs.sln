@@ -116,6 +116,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "(package)", "(package)", "{B5697806-7AB5-4D6C-96B4-253C8C67C7CA}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libobspack", "package\libobspack.vcxproj", "{F1EF318D-278F-4DB4-90BF-3E1085019905}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2E77904B-BCEF-3648-9EDD-D9CB1E0D9E37} = {2E77904B-BCEF-3648-9EDD-D9CB1E0D9E37}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
