@@ -100,7 +100,6 @@ xcopy /s/y/i/f "..\third_party_lib\directx_setup\*.dll" $(OutDir)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\build\buildcfg\obsconfig.h" />
     <ClInclude Include="graphics\image-file.h" />
     <ClInclude Include="graphics\libnsgif\libnsgif.h" />
     <ClInclude Include="obs-config.h" />

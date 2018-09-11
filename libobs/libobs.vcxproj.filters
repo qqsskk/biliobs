@@ -420,9 +420,6 @@
     <ClInclude Include="obs.hpp">
       <Filter>libobs\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\build\buildcfg\obsconfig.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="graphics\image-file.h">
       <Filter>graphics\Header Files</Filter>
     </ClInclude>

@@ -92,7 +92,7 @@ char *jsonp_strndup(const char *str, size_t len);
 
 /* Windows compatibility */
 #ifdef _WIN32
-#define snprintf _snprintf
+//#define snprintf _snprintf
 #define vsnprintf _vsnprintf
 #endif
 

@@ -160,9 +160,9 @@ EXPORT void os_inhibit_sleep_destroy(os_inhibit_t *info);
 
 #ifdef _MSC_VER
 #define strtoll _strtoi64
-#if _MSC_VER < 1800
-#define snprintf _snprintf
-#endif
+// #if _MSC_VER < 1700
+// #define snprintf _snprintf
+// #endif
 #endif
 
 #ifdef __APPLE__

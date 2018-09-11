@@ -1,6 +1,16 @@
 #include "stdafx.h"
 #include "obs_source_helper.h"
 
+#ifdef __APPLE__
+#define INPUT_AUDIO_SOURCE  "coreaudio_input_capture"
+#define OUTPUT_AUDIO_SOURCE "coreaudio_output_capture"
+#elif _WIN32
+#define INPUT_AUDIO_SOURCE  "wasapi_input_capture"
+#define OUTPUT_AUDIO_SOURCE "wasapi_output_capture"
+#else
+#define INPUT_AUDIO_SOURCE  "pulse_input_capture"
+#define OUTPUT_AUDIO_SOURCE "pulse_output_capture"
+#endif
 
 static bool enum_source_callback(void* param, obs_source_t* source)
 {

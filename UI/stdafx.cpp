@@ -8,3 +8,4 @@
 // 引用任何所需的附加头文件，而不是在此文件中引用
 #pragma comment(lib,"libobs.lib")
 #pragma comment(lib,"w32-pthreads.lib")
+#pragma comment(lib, "dbghelp.lib")
