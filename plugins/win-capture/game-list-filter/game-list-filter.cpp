@@ -44,7 +44,7 @@ int main(int argc, char* argv[])
 
 				bModuleFound = false;
 
-				for (int i = 0; i < modCount; ++i)
+				for (unsigned int i = 0; i < modCount; ++i)
 				{
 					if (GetModuleFileNameExW(hProc, hModList[i], &hFileName[0], MAX_PATH) > 0)
 					{

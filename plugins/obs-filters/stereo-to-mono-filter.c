@@ -90,7 +90,7 @@ static struct obs_audio_data *forcemono_filter_audio(void *data, struct obs_audi
 		}
 		else if (fd->mode == MODE_MIX)
 		{
-			for (int i = 0; i < audio->frames; ++i)
+			for (unsigned int i = 0; i < audio->frames; ++i)
 				mixdown(&adata[0][i], &adata[1][i]);
 		}
 	}
