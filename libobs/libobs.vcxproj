@@ -68,6 +68,10 @@
       <ImportLibrary>$(OutDir)lib\$(TargetName).lib</ImportLibrary>
       <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy /s/y/i/f "..\third_party_lib\ffmpeg\*.dll" $(OutDir)
+xcopy /s/y/i/f "..\third_party_lib\directx_setup\*.dll" $(OutDir)</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -90,6 +94,10 @@
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <ImportLibrary>$(OutDir)lib\$(TargetName).lib</ImportLibrary>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy /s/y/i/f "..\third_party_lib\ffmpeg\*.dll" $(OutDir)
+xcopy /s/y/i/f "..\third_party_lib\directx_setup\*.dll" $(OutDir)</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\build\buildcfg\obsconfig.h" />
